@@ -23,3 +23,7 @@ function calcularTotalPagar(monto,interes){
     totalAPagar = monto + interes + 100
     return totalAPagar; 
 }
+
+function calcularCuotaMensual(total, plazos){
+    
+}

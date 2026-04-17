@@ -13,12 +13,15 @@ function calcular(){
     let interesTotal;
     let total;
     let saldoDisponible;
-
+    let prestamoInt;
+    let totalPrestamo;
 
     cmpIngresosFloat=document.getElementById("txtIngresos");
     cmpEgresosFloat=document.getElementById("txtEgresos");
+
     ingresosFloat=parseFloat(cmpIngresosFloat.value);
     egresosFloat=parseFloat(cmpEgresosFloat.value);
+
     saldoDisponible = calcularDisponible(ingresosFloat,egresosFloat);
     total=document.getElementById("spnDisponible");
     total.innerText = saldoDisponible;
@@ -30,15 +33,20 @@ function calcular(){
     cmpMontoInt = document.getElementById("txtMonto");
     cmpPlazoInt = document.getElementById("txtPlazo");
     cmpTasaInt = document.getElementById("txtTasaInteres");
+
     montoInt = parseInt(cmpMontoInt.value);
     plazoInt = parseInt(cmpPlazoInt.value);
     tasaInt = parseInt(cmpTasaInt.value);
+
     interesesSimples = calcularInteresSimple(montoInt,tasaInt,plazoInt);
     interesTotal = document.getElementById("spnInteresPagar");
     interesTotal.innerText = interesesSimples;
 
-    calcularTotalPagar(monto,interes){
-        
-    }
+    totalPrestamo = calcularTotalPagar(montoInt,interesesSimples);
+    prestamoInt = document.getElementById("spnTotalPrestamo");
+    prestamoInt.innerText = totalPrestamo;
+
+    
+    
 }
 
