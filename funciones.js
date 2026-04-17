@@ -11,3 +11,15 @@ function calcularDisponible(ingresos,egresos){
 function calcularCapacidadPago(montoDisponible){
     return montoDisponible*0.5;
 }
+
+function calcularInteresSimple(monto,tasa,plazo){
+    let interesAPagar
+    interesAPagar = plazo * (tasa/100) * monto;
+    return interesAPagar;
+}
+
+function calcularTotalPagar(monto,interes){
+    let totalAPagar
+    totalAPagar = monto + interes + 100
+    return totalAPagar; 
+}
