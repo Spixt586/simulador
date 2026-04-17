@@ -13,17 +13,19 @@ function calcularCapacidadPago(montoDisponible){
 }
 
 function calcularInteresSimple(monto,tasa,plazo){
-    let interesAPagar
+    let interesAPagar;
     interesAPagar = plazo * (tasa/100) * monto;
     return interesAPagar;
 }
 
 function calcularTotalPagar(monto,interes){
-    let totalAPagar
-    totalAPagar = monto + interes + 100
+    let totalAPagar;
+    totalAPagar = monto + interes + 100;
     return totalAPagar; 
 }
 
-function calcularCuotaMensual(total, plazos){
-    
+function calcularCuotaMensual(total, plazoAnios){
+    let totalCuotaMensual;
+    totalCuotaMensual = total/(plazoAnios*12);
+    return totalCuotaMensual;
 }

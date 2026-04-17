@@ -15,6 +15,8 @@ function calcular(){
     let saldoDisponible;
     let prestamoInt;
     let totalPrestamo;
+    let calculoCuotaMensual;
+    let cmpCuotaMensual;
 
     cmpIngresosFloat=document.getElementById("txtIngresos");
     cmpEgresosFloat=document.getElementById("txtEgresos");
@@ -46,7 +48,8 @@ function calcular(){
     prestamoInt = document.getElementById("spnTotalPrestamo");
     prestamoInt.innerText = totalPrestamo;
 
-    
-    
+    calculoCuotaMensual = calcularCuotaMensual(totalPrestamo,plazoInt);
+    cmpCuotaMensual = document.getElementById("spnCuotaMensual");
+    cmpCuotaMensual.innerText = calculoCuotaMensual.toFixed(2);
 }
 
