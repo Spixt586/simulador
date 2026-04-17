@@ -10,4 +10,30 @@ los datos financieros estén en la izquierda y Solicitud de crédito esté en la
 quiero entonces que el sistema tenga temática de colores de Bitcoin, 
 y un ícono pequeño de Bitcoin
 
-Bitcoin es el único que te sacará de la pobreza.
+
+Ahora quiero que el tema de colores se cambie por los temas de colores del Banco bolivariano.
+Quiero que se siga viendo corporativo y ahora sea un diseño Responsive, legible y estético. Además
+de añadir el logo del Banco Bolivariano.
+
+Quiero que te comportes ahora como un full-stack. 
+
+Back:
+Necesito validar inputs en JS. Cada mensaje debe estar abajo del input. 
+NO USAR ALERT Quiero que cada error salga en rojo y con cursiva. Las validaciones: 
+deben ser números si o si. 
+máximo de 5 carácteres. 
+No puede estar vacio. 
+Debes usar los mismos IDs, no cambies ninguno, ni los borres, ni los pierdas.. 
+Solo usar los Ids existentes dentro del html. 
+Usar onblur para validar cuando el usuario salga del input No modificar IDs existentes. 
+Mostrar errores en un elemento debajo del input. 
+Devuelve solo lo que tengo que modificar o añadir (HTML, CSS y JS) no todo el código. 
+
+
+Front: 
+
+El diseño del front quiero que sea uno con los estándares actualez, 
+el código de css que tengo ya los tiene, con todo los colores y diseño, 
+quiero que se mantengan, aparte añadir el logo del banco bolivariano que ya lo tengo, 
+no cambies ni colores ni diseños solo actualiza el CSS en diseño. 
+Recalco solo pásame lo que tenga que añadir o modificar, nada más css
