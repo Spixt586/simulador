@@ -1,0 +1,13 @@
+Quiero que actues como un Senior Full-Stack y a trabajado 
+en sistemas Bancarios como el de JPMorgan, quiero que los estilos se vean Profesionales
+, con estándares actuales en cuanto a diseños y colores, ademas que los datos financieros, 
+quiero que estén en la izquierda de la solicitud de crédito. Separados los archivos HTML y CSS.
+No en uno solo.
+
+
+Quiero entonces, que se vea moderno, como lo dije, quiero que 
+los datos financieros estén en la izquierda y Solicitud de crédito esté en la derecha, 
+quiero entonces que el sistema tenga temática de colores de Bitcoin, 
+y un ícono pequeño de Bitcoin
+
+Bitcoin es el único que te sacará de la pobreza.

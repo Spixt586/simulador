@@ -1,70 +1,171 @@
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f6f8;
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: "Inter", sans-serif;
 }
 
+body {
+    background: linear-gradient(135deg, #0b0b0b, #1a1a1a);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    color: #f7931a;
+}
+
+/* CONTENEDOR */
 .container {
-    width: 400px;
-    margin: 40px auto;
-    padding: 20px;
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    width: 100%;
+    max-width: 1100px;
+    background: #121212;
+    border-radius: 18px;
+    padding: 35px;
+    box-shadow: 0 25px 60px rgba(0,0,0,0.6);
 }
 
+/* TITULO */
 h1 {
     text-align: center;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
+    color: #f7931a;
+    font-weight: 600;
 }
 
-h2 {
-    margin-top: 20px;
-    font-size: 18px;
+/* ICONO BITCOIN */
+.btc-icon {
+    margin-right: 10px;
+    color: #f7931a;
 }
 
+/* GRID */
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+}
+
+/* TARJETAS */
+.section {
+    background: #1c1c1c;
+    padding: 25px;
+    border-radius: 14px;
+    border: 1px solid #2a2a2a;
+    transition: 0.3s;
+}
+
+.section:hover {
+    transform: translateY(-5px);
+    border-color: #f7931a;
+}
+
+.section h2 {
+    margin-bottom: 15px;
+    color: #f7931a;
+}
+
+/* LABELS */
 label {
     display: block;
-    margin-top: 10px;
-    font-weight: bold;
+    margin-top: 12px;
+    font-size: 13px;
+    color: #ffb347; /* naranja más suave */
 }
 
+/* INPUTS */
 input {
     width: 100%;
-    padding: 8px;
+    padding: 12px;
     margin-top: 5px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    box-sizing: border-box;
+    border-radius: 10px;
+    border: 1px solid #333;
+    background: #0f0f0f;
+    color: #f7931a;
+    transition: 0.25s;
 }
 
-p {
-    margin-top: 10px;
+input:focus {
+    outline: none;
+    border-color: #f7931a;
+    box-shadow: 0 0 0 2px rgba(247,147,26,0.3);
 }
 
-span {
-    font-weight: bold;
-    color: #2c3e50;
-}
-
-.buttons {
-    margin-top: 20px;
+/* RESULTADOS */
+.result {
+    margin-top: 14px;
+    padding: 10px;
+    border-radius: 10px;
+    background: #0f0f0f;
     display: flex;
     justify-content: space-between;
+    border: 1px solid #2a2a2a;
+}
+
+.result p {
+    color: #ffb347;
+}
+
+.result span {
+    color: #f7931a;
+    font-weight: bold;
+}
+
+/* ESTADO */
+.estado {
+    margin-top: 18px;
+    padding: 14px;
+    border-radius: 10px;
+    text-align: center;
+    font-weight: bold;
+    background: #2a2a2a;
+    color: #f7931a;
+}
+
+/* APROBADO / RECHAZADO */
+.aprobado {
+    background: #14532d;
+    color: #22c55e;
+}
+
+.rechazado {
+    background: #7f1d1d;
+    color: #ef4444;
+}
+
+/* BOTONES */
+.buttons {
+    margin-top: 30px;
+    display: flex;
+    gap: 15px;
 }
 
 button {
-    width: 48%;
-    padding: 10px;
+    flex: 1;
+    padding: 14px;
     border: none;
-    border-radius: 5px;
-    background-color: #3498db;
-    color: white;
-    font-weight: bold;
+    border-radius: 10px;
+    font-weight: 600;
     cursor: pointer;
+    transition: 0.25s;
 }
 
-button:hover {
-    background-color: #2980b9;
+/* PRINCIPAL */
+.primary {
+    background: linear-gradient(135deg, #f7931a, #ffb347);
+    color: black;
+}
+
+.primary:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 25px rgba(247,147,26,0.5);
+}
+
+/* SECUNDARIO */
+.secondary {
+    background: #2a2a2a;
+    color: #f7931a;
+}
+
+.secondary:hover {
+    background: #3a3a3a;
 }
