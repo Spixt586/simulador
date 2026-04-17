@@ -1,0 +1,17 @@
+Necesito crear validaciones en js para un formulario de simulador de crédito, 
+quiero que los campos sean obligatorios, que se validen como números y que tengan 
+límites mínimos y máximos, además, 
+me gustaría que los errores se muestren debajo de cada campo.
+
+Quiero validar los siguientes campos del formulario:
+1.-Ingresos: deben ser mayores a 0
+2.- Egresos: no pueden ser negativos
+3.- Monto: debe estar entre 100 y 100000
+4.- Plazo: entre 1 y 30 años
+5.- Tasa de interés: entre 0% y 100%
+
+Me gustaría que el sistema controle bien estos valores, quiero que los errores aparezcan 
+automáticamente debajo de cada input cuando el usuario presione el botón, 
+sin necesidad de recargar la página, también necesito una función que elimine 
+los errores anteriores antes de volver a validar, 
+para que no se acumulen mensajes.
