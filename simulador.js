@@ -17,6 +17,8 @@ function calcular(){
     let totalPrestamo;
     let calculoCuotaMensual;
     let cmpCuotaMensual;
+    let cmpCredito;
+    let creditoAnalizado;
 
     cmpIngresosFloat=document.getElementById("txtIngresos");
     cmpEgresosFloat=document.getElementById("txtEgresos");
@@ -51,5 +53,13 @@ function calcular(){
     calculoCuotaMensual = calcularCuotaMensual(totalPrestamo,plazoInt);
     cmpCuotaMensual = document.getElementById("spnCuotaMensual");
     cmpCuotaMensual.innerText = calculoCuotaMensual.toFixed(2);
+
+    let creditoAprobadoInt = aprobarCredito(capacidadDePago,calculoCuotaMensual);
+    cmpCredito = document.getElementById("spnEstadoCredito");
+    if(creditoAprobadoInt){
+        cmpCredito.innerText = "CRÉDITO APROBADO"
+    }else{
+        cmpCredito.innerText = "CRÉDITO RECHAZADO"
+    }
 }
 
