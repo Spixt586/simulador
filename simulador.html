@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Simulador de Crédito</title>
 
-    <!-- Fuente moderna -->
+    <!-- Fuente -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap" rel="stylesheet">
 
     <!-- Iconos -->
@@ -17,10 +16,11 @@
 
 <div class="container">
 
-    <h1>
-        <i class="fa-brands fa-bitcoin btc-icon"></i>
-        Simulador de Crédito
-    </h1>
+    <!-- ✅ HEADER CORRECTO -->
+    <div class="header">
+        <img src="logo-bancobolivariano.jpg" class="logo-banco">
+        <span>Simulador de Crédito</span>
+    </div>
 
     <div class="grid">
 
@@ -29,10 +29,12 @@
             <h2>Datos Financieros</h2>
 
             <label>Ingresos</label>
-            <input type="text" id="txtIngresos">
+            <input type="text" id="txtIngresos" onblur="validarCampo(this)">
+            <span class="error-msg" id="error-txtIngresos"></span>
 
             <label>Egresos</label>
-            <input type="text" id="txtEgresos">
+            <input type="text" id="txtEgresos" onblur="validarCampo(this)">
+            <span class="error-msg" id="error-txtEgresos"></span>
 
             <div class="result">
                 <p>Disponible</p>
@@ -50,13 +52,16 @@
             <h2>Solicitud de Crédito</h2>
 
             <label>Monto</label>
-            <input type="text" id="txtMonto">
+            <input type="text" id="txtMonto" onblur="validarCampo(this)">
+            <span class="error-msg" id="error-txtMonto"></span>
 
             <label>Plazo (años)</label>
-            <input type="text" id="txtPlazo">
+            <input type="text" id="txtPlazo" onblur="validarCampo(this)">
+            <span class="error-msg" id="error-txtPlazo"></span>
 
             <label>Tasa de interés (%)</label>
-            <input type="text" id="txtTasaInteres">
+            <input type="text" id="txtTasaInteres" onblur="validarCampo(this)">
+            <span class="error-msg" id="error-txtTasaInteres"></span>
 
             <div class="result">
                 <p>Interés</p>

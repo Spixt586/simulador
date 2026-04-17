@@ -1,4 +1,58 @@
+function validarCampo(input){
+    let valor = input.value.trim();
+    let error = document.getElementById("error-" + input.id);
+
+    error.innerText = "";
+    input.classList.remove("input-error");
+
+    // vacío
+    if(valor === ""){
+        error.innerText = "Este campo es obligatorio";
+        input.classList.add("input-error");
+        return false;
+    }
+
+    // máximo 5 caracteres
+    if(valor.length > 5){
+        error.innerText = "Máximo 5 caracteres";
+        input.classList.add("input-error");
+        return false;
+    }
+
+    // solo números
+    if(isNaN(valor)){
+        error.innerText = "Solo se permiten números";
+        input.classList.add("input-error");
+        return false;
+    }
+    //solo entre 100 y 0
+    let numero = parseFloat(valor);
+
+    if(input.id == "txtTasaInteres"){
+        if(numero < 0 || numero > 100){
+        error.innerText = "Debe estar entre 0 y 100";
+        input.classList.add("input-error");
+        return false;
+    }
+
+    return true;
+    }
+}   
+
 function calcular(){
+
+    let esValido = true;
+
+    esValido &= validarCampo(document.getElementById("txtIngresos"));
+    esValido &= validarCampo(document.getElementById("txtEgresos"));
+    esValido &= validarCampo(document.getElementById("txtMonto"));
+    esValido &= validarCampo(document.getElementById("txtPlazo"));
+    esValido &= validarCampo(document.getElementById("txtTasaInteres"));
+
+    if(!esValido){
+    return;
+    }
+
     let ingresosFloat=0;
     let egresosFloat=0;
     let cmpIngresosFloat;
@@ -44,11 +98,11 @@ function calcular(){
 
     interesesSimples = calcularInteresSimple(montoInt,tasaInt,plazoInt);
     interesTotal = document.getElementById("spnInteresPagar");
-    interesTotal.innerText = interesesSimples;
+    interesTotal.innerText = interesesSimples.toFixed(2);
 
     totalPrestamo = calcularTotalPagar(montoInt,interesesSimples);
     prestamoInt = document.getElementById("spnTotalPrestamo");
-    prestamoInt.innerText = totalPrestamo;
+    prestamoInt.innerText = totalPrestamo.toFixed(2);
 
     calculoCuotaMensual = calcularCuotaMensual(totalPrestamo,plazoInt);
     cmpCuotaMensual = document.getElementById("spnCuotaMensual");

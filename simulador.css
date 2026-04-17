@@ -6,36 +6,41 @@
 }
 
 body {
-    background: linear-gradient(135deg, #0b0b0b, #1a1a1a);
+    background: linear-gradient(135deg, #1f7f7a, #2fa39c);
     display: flex;
     justify-content: center;
     align-items: center;
     min-height: 100vh;
-    color: #f7931a;
+    padding: 20px;
 }
 
 /* CONTENEDOR */
 .container {
     width: 100%;
     max-width: 1100px;
-    background: #121212;
+    background: #ffffff;
     border-radius: 18px;
     padding: 35px;
-    box-shadow: 0 25px 60px rgba(0,0,0,0.6);
+    box-shadow: 0 25px 60px rgba(0,0,0,0.2);
 }
 
-/* TITULO */
-h1 {
-    text-align: center;
-    margin-bottom: 30px;
-    color: #f7931a;
+/* HEADER */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 25px;
+    color: #1f7f7a;
     font-weight: 600;
+    font-size: 26px;
 }
 
-/* ICONO BITCOIN */
-.btc-icon {
-    margin-right: 10px;
-    color: #f7931a;
+/* LOGO */
+.logo-banco {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
 }
 
 /* GRID */
@@ -47,21 +52,22 @@ h1 {
 
 /* TARJETAS */
 .section {
-    background: #1c1c1c;
+    background: #f8fafc;
     padding: 25px;
     border-radius: 14px;
-    border: 1px solid #2a2a2a;
+    border: 1px solid #e2e8f0;
     transition: 0.3s;
 }
 
 .section:hover {
-    transform: translateY(-5px);
-    border-color: #f7931a;
+    transform: translateY(-4px);
+    border-color: #1f7f7a;
 }
 
 .section h2 {
     margin-bottom: 15px;
-    color: #f7931a;
+    color: #1f7f7a;
+    font-size: 18px;
 }
 
 /* LABELS */
@@ -69,7 +75,7 @@ label {
     display: block;
     margin-top: 12px;
     font-size: 13px;
-    color: #ffb347; /* naranja más suave */
+    color: #475569;
 }
 
 /* INPUTS */
@@ -78,36 +84,51 @@ input {
     padding: 12px;
     margin-top: 5px;
     border-radius: 10px;
-    border: 1px solid #333;
-    background: #0f0f0f;
-    color: #f7931a;
+    border: 1px solid #cbd5e1;
+    background: #ffffff;
+    color: #1e293b;
+    font-size: 14px;
     transition: 0.25s;
 }
 
 input:focus {
     outline: none;
-    border-color: #f7931a;
-    box-shadow: 0 0 0 2px rgba(247,147,26,0.3);
+    border-color: #1f7f7a;
+    box-shadow: 0 0 0 2px rgba(31,127,122,0.2);
+}
+
+/* ERRORES */
+.error-msg {
+    display: block;
+    margin-top: 5px;
+    font-size: 12px;
+    color: red;
+    font-style: italic;
+}
+
+.input-error {
+    border-color: red !important;
 }
 
 /* RESULTADOS */
 .result {
     margin-top: 14px;
-    padding: 10px;
+    padding: 12px;
     border-radius: 10px;
-    background: #0f0f0f;
+    background: #ffffff;
     display: flex;
     justify-content: space-between;
-    border: 1px solid #2a2a2a;
+    border: 1px solid #e2e8f0;
+    font-size: 14px;
 }
 
 .result p {
-    color: #ffb347;
+    color: #64748b;
 }
 
 .result span {
-    color: #f7931a;
-    font-weight: bold;
+    color: #1f7f7a;
+    font-weight: 600;
 }
 
 /* ESTADO */
@@ -117,19 +138,18 @@ input:focus {
     border-radius: 10px;
     text-align: center;
     font-weight: bold;
-    background: #2a2a2a;
-    color: #f7931a;
+    background: #e2e8f0;
+    color: #1f7f7a;
 }
 
-/* APROBADO / RECHAZADO */
 .aprobado {
-    background: #14532d;
-    color: #22c55e;
+    background: #d1fae5;
+    color: #065f46;
 }
 
 .rechazado {
-    background: #7f1d1d;
-    color: #ef4444;
+    background: #fee2e2;
+    color: #991b1b;
 }
 
 /* BOTONES */
@@ -149,23 +169,42 @@ button {
     transition: 0.25s;
 }
 
-/* PRINCIPAL */
 .primary {
-    background: linear-gradient(135deg, #f7931a, #ffb347);
-    color: black;
+    background: #1f7f7a;
+    color: white;
 }
 
 .primary:hover {
-    transform: scale(1.05);
-    box-shadow: 0 10px 25px rgba(247,147,26,0.5);
+    background: #186661;
+    transform: scale(1.03);
 }
 
-/* SECUNDARIO */
 .secondary {
-    background: #2a2a2a;
-    color: #f7931a;
+    background: #e2e8f0;
+    color: #1f7f7a;
 }
 
 .secondary:hover {
-    background: #3a3a3a;
+    background: #cbd5e1;
+}
+
+/* RESPONSIVE */
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    .header {
+        flex-direction: column;
+        font-size: 20px;
+    }
+
+    .logo-banco {
+        width: 40px;
+        height: 40px;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
 }
