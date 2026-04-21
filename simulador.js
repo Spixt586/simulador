@@ -34,29 +34,34 @@ function validarCampo(input){
         input.classList.add("input-error");
         return false;
     }
-
-    return true;
     }
+     return true;
 }   
 
 function calcular(){
 
     let esValido = true;
 
-    esValido &= validarCampo(document.getElementById("txtIngresos"));
-    esValido &= validarCampo(document.getElementById("txtEgresos"));
-    esValido &= validarCampo(document.getElementById("txtMonto"));
-    esValido &= validarCampo(document.getElementById("txtPlazo"));
-    esValido &= validarCampo(document.getElementById("txtTasaInteres"));
+    esValido && validarCampo(document.getElementById("txtIngresos"));
+    esValido && validarCampo(document.getElementById("txtArriendo"));
+    esValido && validarCampo(document.getElementById("txtAlimentacion"));
+    esValido && validarCampo(document.getElementById("txtVarios"));
+    esValido && validarCampo(document.getElementById("txtMonto"));
+    esValido && validarCampo(document.getElementById("txtPlazo"));
+    esValido && validarCampo(document.getElementById("txtTasaInteres"));
 
     if(!esValido){
     return;
     }
 
     let ingresosFloat=0;
-    let egresosFloat=0;
+    let arriendoFloat=0;
+    let alimentacionFloat=0;
+    let variosFloat=0;
     let cmpIngresosFloat;
-    let cmpEgresosFloat;
+    let cmpArriendoFloat;
+    let cmpAlimentacionFloat;
+    let cmpVariosFloat;
     let montoInt = 0;
     let plazoInt = 0;
     let tasaInt = 0;
@@ -75,12 +80,16 @@ function calcular(){
     let creditoAnalizado;
 
     cmpIngresosFloat=document.getElementById("txtIngresos");
-    cmpEgresosFloat=document.getElementById("txtEgresos");
+    cmpArriendoFloat=document.getElementById("txtArriendo");
+    cmpAlimentacionFloat=document.getElementById("txtAlimentacion");
+    cmpVariosFloat=document.getElementById("txtVarios");
 
     ingresosFloat=parseFloat(cmpIngresosFloat.value);
-    egresosFloat=parseFloat(cmpEgresosFloat.value);
+    arriendoFloat=parseFloat(cmpArriendoFloat.value);
+    alimentacionFloat=parseFloat(cmpAlimentacionFloat.value);
+    variosFloat=parseFloat(cmpVariosFloat.value);
 
-    saldoDisponible = calcularDisponible(ingresosFloat,egresosFloat);
+    saldoDisponible = calcularDisponible(ingresosFloat,arriendoFloat, alimentacionFloat, variosFloat);
     total=document.getElementById("spnDisponible");
     total.innerText = saldoDisponible;
 

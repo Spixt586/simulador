@@ -1,6 +1,6 @@
-function calcularDisponible(ingresos,egresos){
+function calcularDisponible(ingresos,arriendo,alimentacion,varios){
     let valorDisponible;
-    valorDisponible=ingresos-egresos;
+    valorDisponible = ingresos - (arriendo+alimentacion+varios);
     if(valorDisponible<0){
         return "0";
     }

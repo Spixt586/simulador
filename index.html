@@ -11,6 +11,10 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
 
     <link rel="stylesheet" href="simulador.css">
+
+    <script src="simulador.js"></script>
+    <script src="funciones.js"></script>
+
 </head>
 <body>
 
@@ -32,9 +36,17 @@
             <input type="text" id="txtIngresos" onblur="validarCampo(this)">
             <span class="error-msg" id="error-txtIngresos"></span>
 
-            <label>Egresos</label>
-            <input type="text" id="txtEgresos" onblur="validarCampo(this)">
-            <span class="error-msg" id="error-txtEgresos"></span>
+            <label>Arriendo</label>
+            <input type="text" id="txtArriendo" onblur="validarCampo(this)">
+            <span class="error-msg" id="error-txtArriendo"></span>
+
+            <label>Alimentación</label>
+            <input type="text" id="txtAlimentacion" onblur="validarCampo(this)">
+            <span class="error-msg" id="error-txtAlimentacion"></span>
+
+            <label>varios</label>
+            <input type="text" id="txtVarios" onblur="validarCampo(this)">
+            <span class="error-msg" id="error-txtVarios"></span>
 
             <div class="result">
                 <p>Disponible</p>
@@ -91,9 +103,6 @@
     </div>
 
 </div>
-
-<script src="simulador.js"></script>
-<script src="funciones.js"></script>
 
 </body>
 </html>
